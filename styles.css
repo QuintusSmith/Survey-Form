@@ -1,366 +1,390 @@
 *,
 *::before,
-*::after
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-:root
-{
-    /* CSS HSL */
-    --queen-blue: hsla(207, 29%, 43%, 1);
-    --queen-blue-50-opacity: hsla(207, 29%, 43%, .5);
-    --yale-blue: hsla(212, 42%, 31%, 1);
-    --indigo-dye: hsla(212, 83%, 25%, 1);
-    --yale-blue-2: hsla(208, 56%, 29%, 1);
-    --black: hsla(240, 100%, 0%, 1);
-    
-    /* CSS Gradient */
-    --gradient-top: linear-gradient(0deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
-    --gradient-right: linear-gradient(90deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
-    --gradient-bottom: linear-gradient(180deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
-    --gradient-left: linear-gradient(270deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
-    --gradient-top-right: linear-gradient(45deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
-    --gradient-bottom-right: linear-gradient(135deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
-    --gradient-top-left: linear-gradient(225deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
-    --gradient-bottom-left: linear-gradient(315deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
-    --gradient-radial: radial-gradient(#4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
+:root {
+  /* CSS HSL */
+  --queen-blue: hsla(207, 29%, 43%, 1);
+  --queen-blue-50-opacity: hsla(207, 29%, 43%, 0.5);
+  --yale-blue: hsla(212, 42%, 31%, 1);
+  --indigo-dye: hsla(212, 83%, 25%, 1);
+  --yale-blue-2: hsla(208, 56%, 29%, 1);
+  --black: hsla(240, 100%, 0%, 1);
 
-    --font-item-main: 1.8rem;
-    --font-item: 1.4rem;
-    --font-item-sub: 1rem;
+  /* CSS Gradient */
+  --gradient-top: linear-gradient(
+    0deg,
+    #4f728eff,
+    #2d4c6fff,
+    #0b3e77ff,
+    #214e75ff,
+    #000001ff
+  );
+  --gradient-right: linear-gradient(
+    90deg,
+    #4f728eff,
+    #2d4c6fff,
+    #0b3e77ff,
+    #214e75ff,
+    #000001ff
+  );
+  --gradient-bottom: linear-gradient(
+    180deg,
+    #4f728eff,
+    #2d4c6fff,
+    #0b3e77ff,
+    #214e75ff,
+    #000001ff
+  );
+  --gradient-left: linear-gradient(
+    270deg,
+    #4f728eff,
+    #2d4c6fff,
+    #0b3e77ff,
+    #214e75ff,
+    #000001ff
+  );
+  --gradient-top-right: linear-gradient(
+    45deg,
+    #4f728eff,
+    #2d4c6fff,
+    #0b3e77ff,
+    #214e75ff,
+    #000001ff
+  );
+  --gradient-bottom-right: linear-gradient(
+    135deg,
+    #4f728eff,
+    #2d4c6fff,
+    #0b3e77ff,
+    #214e75ff,
+    #000001ff
+  );
+  --gradient-top-left: linear-gradient(
+    225deg,
+    #4f728eff,
+    #2d4c6fff,
+    #0b3e77ff,
+    #214e75ff,
+    #000001ff
+  );
+  --gradient-bottom-left: linear-gradient(
+    315deg,
+    #4f728eff,
+    #2d4c6fff,
+    #0b3e77ff,
+    #214e75ff,
+    #000001ff
+  );
+  --gradient-radial: radial-gradient(
+    #4f728eff,
+    #2d4c6fff,
+    #0b3e77ff,
+    #214e75ff,
+    #000001ff
+  );
+
+  --font-item-main: 1.8rem;
+  --font-item: 1.4rem;
+  --font-item-sub: 1rem;
 }
 
-body
-{
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    font-size: 1vmin;
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font-size: 1vmin;
 }
 
-.background-container
-{
-    background: url("https://raw.githubusercontent.com/QuintusSmith/Survey-Form/3a34ec9adb11128623387fa2c80400b6749befd0/background.webp");
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -2;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center;
+.background-container {
+  background: url("https://raw.githubusercontent.com/QuintusSmith/Survey-Form/3a34ec9adb11128623387fa2c80400b6749befd0/background.webp");
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#survey-form
-{
-    position: absolute;
-    top: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: hsla(212, 50%, 70%, .7);
-    border: .7rem inset hsla(212, 42%, 31%, .7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 2rem;
-    min-width: max-content;
-    width: 70%;
-    height: auto;
-    box-shadow: 0rem 0rem .4rem 1rem hsla(0, 0%, 0%, .6);
+#survey-form {
+  position: absolute;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: hsla(212, 50%, 70%, 0.7);
+  border: 0.7rem inset hsla(212, 42%, 31%, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2rem;
+  min-width: max-content;
+  width: 70%;
+  height: auto;
+  box-shadow: 0rem 0rem 0.4rem 1rem hsla(0, 0%, 0%, 0.6);
 }
 
-#title
-{
-    color: hsla(212, 80%, 16%, 1);
-    font-size: 4.5rem;
-    letter-spacing: .5rem;
-    font-weight: 600;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: .4rem;
-    text-shadow: .2rem .2rem .2rem black;
+#title {
+  color: hsla(212, 80%, 16%, 1);
+  font-size: 4.5rem;
+  letter-spacing: 0.5rem;
+  font-weight: 600;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 0.4rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem black;
 }
 
-#description
-{
-    color: hsla(212, 83%, 20%, 1);
-    font-size: var(--font-item-main);
-    margin-bottom: 2.2rem;
-    letter-spacing: .05rem;
-    font-weight: 200;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#description {
+  color: hsla(212, 83%, 20%, 1);
+  font-size: var(--font-item-main);
+  margin-bottom: 2.2rem;
+  letter-spacing: 0.05rem;
+  font-weight: 200;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.input-collection
-{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin-bottom: 1rem;
+.input-collection {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 1rem;
 }
 
-.input-collection label
-{
-    font-size: var(--font-item-main);
-    margin-bottom: .3rem;
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: .2rem;
-    text-shadow: .05rem .05rem .05rem #ddd;
+.input-collection label {
+  font-size: var(--font-item-main);
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.05rem 0.05rem 0.05rem #ddd;
 }
 
-.input-collection input
-{
-    font-size: var(--font-item);
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-bottom: .4rem;
-    background: none;
-    border: none;
-    outline: none;
-    background-color: hsla(212, 100%, 85%, .5);
-    border: .4rem inset hsla(212, 42%, 31%, .7);
-    padding: .6rem;
-    color: hsla(212, 80%, 10%, 1);
-    box-shadow: .2rem .2rem .4rem black;
-    border-radius: 1rem;
+.input-collection input {
+  font-size: var(--font-item);
+  font-weight: 500;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-bottom: 0.4rem;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: hsla(212, 100%, 85%, 0.5);
+  border: 0.4rem inset hsla(212, 42%, 31%, 0.7);
+  padding: 0.6rem;
+  color: hsla(212, 80%, 10%, 1);
+  box-shadow: 0.2rem 0.2rem 0.4rem black;
+  border-radius: 1rem;
 }
 
 .input-collection input:hover,
-.input-collection input:focus
-{
-    background-color: hsla(216, 100%, 75%, 1);
-    border: .4rem inset hsla(208, 42%, 50%, 1);
+.input-collection input:focus {
+  background-color: hsla(216, 100%, 75%, 1);
+  border: 0.4rem inset hsla(208, 42%, 50%, 1);
 }
 
-.radio-collection
-{
-    width: 40%;
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-shadow: .05rem .05rem .05rem #ddd;
-    margin-top: -.4rem;
-    margin-bottom: 2rem;
+.radio-collection {
+  width: 40%;
+  font-weight: 500;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0.05rem 0.05rem 0.05rem #ddd;
+  margin-top: -0.4rem;
+  margin-bottom: 2rem;
 }
 
-.radio-collection fieldset
-{
-    width: 100%;
-    border: .4rem outset hsla(212, 42%, 31%, .7);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 2rem;
+.radio-collection fieldset {
+  width: 100%;
+  border: 0.4rem outset hsla(212, 42%, 31%, 0.7);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 2rem;
 }
 
-.radio-collection legend
-{
-    font-size: var(--font-item-main);
+.radio-collection legend {
+  font-size: var(--font-item-main);
 }
 
-.radio-collection label
-{
-    font-size: var(--font-item);
+.radio-collection label {
+  font-size: var(--font-item);
 }
 
 .radio-collection label:hover,
-.radio-collection label:focus
-{
-    background-color: hsla(216, 100%, 75%, .9);
+.radio-collection label:focus {
+  background-color: hsla(216, 100%, 75%, 0.9);
 }
 
-.radio-collection label:first-of-type
-{
-    margin-top: 0;
-    margin-top: -.3rem;
+.radio-collection label:first-of-type {
+  margin-top: 0;
+  margin-top: -0.3rem;
 }
 
-.radio-collection input
-{
-    font-size: var(--font-item);
+.radio-collection input {
+  font-size: var(--font-item);
 }
 
 .radio-collection input:hover,
-.radio-collection input:focus
-{
-    background-color: hsla(216, 100%, 75%, 1);
+.radio-collection input:focus {
+  background-color: hsla(216, 100%, 75%, 1);
 }
 
-.dropdown-collection
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-width: max-content;
-    margin-bottom: 2rem;
+.dropdown-collection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: max-content;
+  margin-bottom: 2rem;
 }
 
-.dropdown-collection label
-{
-    font-size: var(--font-item-main);
-    letter-spacing: 0rem;
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-shadow: .05rem .05rem .05rem #ddd;
-    margin-bottom: .5rem;
+.dropdown-collection label {
+  font-size: var(--font-item-main);
+  letter-spacing: 0rem;
+  font-weight: 500;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0.05rem 0.05rem 0.05rem #ddd;
+  margin-bottom: 0.5rem;
 }
 
-#dropdown
-{
-    font-size: var(--font-item);
-    background-color: hsla(212, 100%, 85%, .5);
-    border: .4rem inset hsla(212, 42%, 31%, .7);
-    padding: .5rem;
-    color: hsla(212, 80%, 10%, 1);
-    cursor: pointer;
-    text-align: center;
-    width: 80%;
-    border-radius: .2rem;
+#dropdown {
+  font-size: var(--font-item);
+  background-color: hsla(212, 100%, 85%, 0.5);
+  border: 0.4rem inset hsla(212, 42%, 31%, 0.7);
+  padding: 0.5rem;
+  color: hsla(212, 80%, 10%, 1);
+  cursor: pointer;
+  text-align: center;
+  width: 80%;
+  border-radius: 0.2rem;
 }
 
 #dropdown:focus-within,
 #dropdown:focus,
-#dropdown:hover
-{
-    cursor: pointer;
-    background-color: hsla(216, 100%, 75%, 1);
-    border: .4rem inset hsla(208, 42%, 50%, 1);
+#dropdown:hover {
+  cursor: pointer;
+  background-color: hsla(216, 100%, 75%, 1);
+  border: 0.4rem inset hsla(208, 42%, 50%, 1);
 }
 
-#dropdown > option
-{
-    background-color: hsla(216, 50%, 80%, .5);
-    font-size: var(--font-item-sub);
+#dropdown > option {
+  background-color: hsla(216, 50%, 80%, 0.5);
+  font-size: var(--font-item-sub);
 }
 
-.checkbox-collection
-{
-    width: 80%;
-    font-size: var(--font-item);
-    height: auto;
-    margin-bottom: 2rem;
+.checkbox-collection {
+  width: 80%;
+  font-size: var(--font-item);
+  height: auto;
+  margin-bottom: 2rem;
 }
 
 .checkbox-collection-item:hover,
-.checkbox-collection-item:focus
-{
-    cursor: pointer;
-    background-color: hsla(216, 100%, 75%, 1);
+.checkbox-collection-item:focus {
+  cursor: pointer;
+  background-color: hsla(216, 100%, 75%, 1);
 }
 
-.checkbox-collection fieldset
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 2rem;
+.checkbox-collection fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem;
 }
 
-.checkbox-collection-item
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.checkbox-collection-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.checkbox-collection-item label
-{
-    font-size: var(--font-item-main);
-    margin-bottom: .3rem;
-    font-weight: 900;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: .2rem;
-    text-shadow: .05rem .05rem .05rem #ddd;
+.checkbox-collection-item label {
+  font-size: var(--font-item-main);
+  margin-bottom: 0.3rem;
+  font-weight: 900;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.05rem 0.05rem 0.05rem #ddd;
 }
 
-.checkbox-collection-item input
-{
-    font-size: var(--font-item-main);
-    font-weight: 900;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    box-shadow: .2rem .2rem .4rem black;
+.checkbox-collection-item input {
+  font-size: var(--font-item-main);
+  font-weight: 900;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  box-shadow: 0.2rem 0.2rem 0.4rem black;
 }
 
-.checkbox-collection legend
-{
-    font-size: var(--font-item-main);
+.checkbox-collection legend {
+  font-size: var(--font-item-main);
 }
 
-.textarea-collection
-{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+.textarea-collection {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.textarea-collection label
-{
-    width: 100%;
-    font-size: var(--font-item-main);
-    letter-spacing: .2rem;
-    font-weight: 500;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-shadow: .05rem .05rem .05rem #ddd;
-    text-align: center;
-    margin-bottom: .5rem;
+.textarea-collection label {
+  width: 100%;
+  font-size: var(--font-item-main);
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0.05rem 0.05rem 0.05rem #ddd;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-#comments-textarea
-{
-    resize: none;
-    width: 100%;
-    height: 30vh;
-    font-size: var(--font-item);
-    background-color: hsla(212, 100%, 85%, .5);
-    border: .4rem inset hsla(212, 42%, 31%, .7);
-    color: hsla(212, 80%, 10%, 1);
-    border-radius: 1rem;
-    padding: 1rem;
+#comments-textarea {
+  resize: none;
+  width: 100%;
+  height: 30vh;
+  font-size: var(--font-item);
+  background-color: hsla(212, 100%, 85%, 0.5);
+  border: 0.4rem inset hsla(212, 42%, 31%, 0.7);
+  color: hsla(212, 80%, 10%, 1);
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 #comments-textarea:focus,
-#comments-textarea:hover
-{
-    cursor: pointer;
-    background-color: hsla(216, 100%, 75%, 1);
-    border: .4rem inset hsla(208, 42%, 50%, 1);
+#comments-textarea:hover {
+  cursor: pointer;
+  background-color: hsla(216, 100%, 75%, 1);
+  border: 0.4rem inset hsla(208, 42%, 50%, 1);
 }
 
-.btn-collection
-{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    width: 90%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.btn-collection {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.btn-collection button
-{
-    width: 40%;
-    padding: .5rem;
-    font-size: var(--font-item-main);
-    border-radius: 999999999px;
-    background-color: hsla(212, 70%, 95%, .5);
-    border: .4rem inset hsla(212, 30%, 75%, .7);
-    color: hsla(212, 80%, 55%, 1);
-    cursor: pointer;
+.btn-collection button {
+  width: 40%;
+  padding: 0.5rem;
+  font-size: var(--font-item-main);
+  border-radius: 999999999px;
+  background-color: hsla(212, 70%, 95%, 0.5);
+  border: 0.4rem inset hsla(212, 30%, 75%, 0.7);
+  color: hsla(212, 80%, 55%, 1);
+  cursor: pointer;
 }
 
 .btn-collection button:hover,
-.btn-collection button:focus
-{
-    background-color: hsla(212, 50%, 65%, 1);
-    border: .4rem inset hsla(212, 50%, 45%, 1);
-    color: hsla(212, 80%, 25%, 1);
+.btn-collection button:focus {
+  background-color: hsla(212, 50%, 65%, 1);
+  border: 0.4rem inset hsla(212, 50%, 45%, 1);
+  color: hsla(212, 80%, 25%, 1);
 }
