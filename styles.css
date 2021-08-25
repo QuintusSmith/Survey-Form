@@ -27,6 +27,10 @@
     --gradient-top-left: linear-gradient(225deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
     --gradient-bottom-left: linear-gradient(315deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
     --gradient-radial: radial-gradient(#4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
+
+    --font-item-main: 1.8rem;
+    --font-item: 1.4rem;
+    --font-item-sub: 1rem;
 }
 
 body
@@ -40,7 +44,7 @@ body
 .background-container
 {
     background: url("https://raw.githubusercontent.com/QuintusSmith/Survey-Form/3a34ec9adb11128623387fa2c80400b6749befd0/background.webp");
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -68,6 +72,7 @@ body
     width: 70%;
     height: auto;
     box-shadow: 0rem 0rem .4rem 1rem hsla(0, 0%, 0%, .6);
+    margin-top: 5vh;
 }
 
 #title
@@ -84,9 +89,9 @@ body
 #description
 {
     color: hsla(212, 83%, 20%, 1);
-    font-size: 1.6rem;
+    font-size: var(--font-item-main);
     margin-bottom: 2.2rem;
-    letter-spacing: .1rem;
+    letter-spacing: .05rem;
     font-weight: 200;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -101,7 +106,7 @@ body
 
 .input-collection label
 {
-    font-size: 1.8rem;
+    font-size: var(--font-item-main);
     margin-bottom: .3rem;
     font-weight: 500;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -111,7 +116,7 @@ body
 
 .input-collection input
 {
-    font-size: 1.4rem;
+    font-size: var(--font-item);
     font-weight: 500;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-bottom: .4rem;
@@ -120,9 +125,10 @@ body
     outline: none;
     background-color: hsla(212, 100%, 85%, .5);
     border: .4rem inset hsla(212, 42%, 31%, .7);
-    padding: .3rem;
+    padding: .6rem;
     color: hsla(212, 80%, 10%, 1);
     box-shadow: .2rem .2rem .4rem black;
+    border-radius: 1rem;
 }
 
 .input-collection input:hover,
@@ -146,30 +152,85 @@ body
 {
     width: 100%;
     border: .4rem outset hsla(212, 42%, 31%, .7);
-    text-align: center;
-    padding: .5rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border-radius: 2rem;
 }
 
 .radio-collection legend
 {
-    align-self: center;
-    background-color: transparent;
-    font-size: 1.8rem;
+    font-size: var(--font-item-main);
 }
 
 .radio-collection label
 {
-    align-self: center;
-    background-color: transparent;
-    font-size: 1.4rem;
+    font-size: var(--font-item);
+}
+
+.radio-collection label:first-of-type
+{
+    margin-top: 0;
+    margin-top: -.3rem;
 }
 
 .radio-collection input
 {
-    align-self: center;
-    background-color: transparent;
-    font-size: 1.4rem;
+    font-size: var(--font-item);
+}
+
+.dropdown-collection
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: max-content;
+    margin-bottom: 2rem;
+}
+
+.dropdown-collection label
+{
+    font-size: var(--font-item-main);
+    letter-spacing: 0rem;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: .05rem .05rem .05rem #ddd;
+    margin-bottom: .5rem;
+}
+
+#dropdown
+{
+    font-size: var(--font-item);
+    background-color: hsla(212, 100%, 85%, .5);
+    border: .4rem inset hsla(212, 42%, 31%, .7);
+    padding: .5rem;
+    color: hsla(212, 80%, 10%, 1);
+    cursor: pointer;
+    text-align: center;
+    width: 80%;
+    border-radius: .2rem;
+}
+
+#dropdown:focus-within,
+#dropdown:focus
+{
+    background-color: hsla(212, 50%, 75%, .8);
+    border: .4rem inset hsla(212, 42%, 31%, .9);
+    color: hsla(212, 60%, 10%, 1);
+    cursor: pointer;
+}
+
+#dropdown > option
+{
+    background-color: hsla(216, 50%, 80%, .5);
+    font-size: var(--font-item-sub);
+}
+
+.checkbox-collection
+{
+    width: 80%;
+    font-size: var(--font-item);
+    height: auto;
 }
