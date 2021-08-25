@@ -39,7 +39,7 @@ body
 
 .background-container
 {
-    background: url("background.webp");
+    background: url("https://raw.githubusercontent.com/QuintusSmith/Survey-Form/3a34ec9adb11128623387fa2c80400b6749befd0/background.webp");
     position: absolute;
     top: 0;
     bottom: 0;
