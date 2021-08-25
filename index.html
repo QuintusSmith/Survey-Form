@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
+
+</head>
+<body>
+
+    <div class="background-container"></div>
+
+    <form action="/" id="survey-form" method="GET">
+
+        <h1 id="title">Job Survey Form:</h1>
+        <p id="description">A short, quick and easy survey on the most-to-least common Job fields</p>
+
+        <div class="input-collection">
+            <label for="name" id="name-label">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Jane Doe" required>
+        </div>
+
+        <div class="input-collection">
+            <label for="email" id="email-label">Email:</label>
+            <input type="email" name="email" id="email" placeholder="someone@somewhere" required>
+        </div>
+        
+        <div class="input-collection">
+            <label for="number" id="number-label">Your Age:(optional)</label>
+            <input type="number" name="number" id="number" min="1" max="100" placeholder="Your Age">
+        </div>
+
+        <div class="radio-collection">
+            <fieldset>
+            <legend>Gender:</legend>
+
+            <label for="radio-gender-male">Male:</label>
+            <input type="radio" name="gender" id="radio-gender-male" value="male" checked>
+
+            <label for="radio-gender-female">Female:</label>
+            <input type="radio" name="gender" id="radio-gender-female" value="female">
+
+            <label for="radio-gender-other">Other:</label>
+            <input type="radio" name="gender" id="radio-gender-other" value="other">
+
+            </fieldset>
+        </div>
+
+        <div class="dropdown-collection">
+            <label for="dropdown">Select the field that closest resembles your current employment field:</label>
+            <select id="dropdown">
+                <option name="field" value="Architecture and engineering">Architecture and engineering</option>
+                <option name="field" value="Arts, culture and entertainment">Arts, culture and entertainment</option>
+                <option name="field" value="Business, management and administration">Business, management and administration</option>
+                <option name="field" value="Communications">Communications</option>
+                <option name="field" value="Community and social services">Community and social services</option>
+                <option name="field" value="Education">Education</option>
+                <option name="field" value="Science and technology">Science and technology</option>
+                <option name="field" value="Installation, repair and maintenance">Installation, repair and maintenance</option>
+                <option name="field" value="Farming, fishing and forestry">Farming, fishing and forestry</option>
+                <option name="field" value="Government">Government</option>
+                <option name="field" value="Health and medicine">Health and medicine</option>
+                <option name="field" value="Law and public policy">Law and public policy</option>
+                <option name="field" value="Sales">Sales</option>
+                <option name="field" value="not-employed">Not currently Employed</option>
+            </select>
+        </div>
+
+        <div class="checkbox-collection">
+
+            <fieldset>
+            <legend>What are the main points of impact of your field:</legend>
+
+
+            <label for="checkbox-client-service">Client Service:</label>
+            <input type="checkbox" name="points-of-impact" id="checkbox-client-service" value="client-service">
+
+            <label for="checkbox-client-networking">Client Networking:</label>
+            <input type="checkbox" name="points-of-impact" id="checkbox-client-networking" value="client-networking">
+
+            <label for="checkbox-product-production">Production:</label>
+            <input type="checkbox" name="points-of-impact" id="checkbox-product-production" value="production">
+
+            <label for="checkbox-product-advertisement">Product advertisement:</label>
+            <input type="checkbox" name="points-of-impact" id="checkbox-product-advertisement" value="product-advertisement">
+
+            <label for="checkbox-product-sales">Product Sales:</label>
+            <input type="checkbox" name="points-of-impact" id="checkbox-product-Sales" value="product-sales">
+
+            <label for="checkbox-product-distribution">Product Distribution:</label>
+            <input type="checkbox" name="points-of-impact" id="checkbox-product-distribution" value="product-distribution">
+
+            <label for="checkbox-product-repair">Product Repairs:</label>
+            <input type="checkbox" name="points-of-impact" id="checkbox-product-repair" value="product-repair">
+
+            </fieldset>
+
+        </div>
+
+        <div class="textarea-collection">
+            <label for="comments-textarea">Any aditional thoughts or comments you might want to share?</label>
+            <textarea id="comments-textarea" name="comments-textarea" placeholder="Any additional comments here..." maxlength="1000"></textarea>
+        </div>
+
+        <button type="submit" id="submit">Sign Up</button>
+    </form>
+</body>
+</html>

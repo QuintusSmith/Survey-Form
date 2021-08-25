@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    /* CSS HSL */
+    --queen-blue: hsla(207, 29%, 43%, 1);
+    --queen-blue-50-opacity: hsla(207, 29%, 43%, .5);
+    --yale-blue: hsla(212, 42%, 31%, 1);
+    --indigo-dye: hsla(212, 83%, 25%, 1);
+    --yale-blue-2: hsla(208, 56%, 29%, 1);
+    --black: hsla(240, 100%, 0%, 1);
+    
+    /* CSS Gradient */
+    --gradient-top: linear-gradient(0deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
+    --gradient-right: linear-gradient(90deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
+    --gradient-bottom: linear-gradient(180deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
+    --gradient-left: linear-gradient(270deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
+    --gradient-top-right: linear-gradient(45deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
+    --gradient-bottom-right: linear-gradient(135deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
+    --gradient-top-left: linear-gradient(225deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
+    --gradient-bottom-left: linear-gradient(315deg, #4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
+    --gradient-radial: radial-gradient(#4F728Eff, #2D4C6Fff, #0B3E77ff, #214E75ff, #000001ff);
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-size: 1vmin;
+}
+
+.background-container
+{
+    background: url("background.webp");
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#survey-form
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsla(212, 50%, 70%, .7);
+    border: .7rem inset hsla(212, 42%, 31%, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2rem;
+    min-width: max-content;
+    width: 70%;
+    height: auto;
+    box-shadow: 0rem 0rem .4rem 1rem hsla(0, 0%, 0%, .6);
+}
+
+#title
+{
+    color: hsla(212, 80%, 16%, 1);
+    font-size: 4.5rem;
+    letter-spacing: .5rem;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: .4rem;
+    text-shadow: .2rem .2rem .2rem black;
+}
+
+#description
+{
+    color: hsla(212, 83%, 20%, 1);
+    font-size: 1.6rem;
+    margin-bottom: 2.2rem;
+    letter-spacing: .1rem;
+    font-weight: 200;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.input-collection
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.input-collection label
+{
+    font-size: 1.8rem;
+    margin-bottom: .3rem;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .2rem;
+    text-shadow: .05rem .05rem .05rem #ddd;
+}
+
+.input-collection input
+{
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: .4rem;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: hsla(212, 100%, 85%, .5);
+    border: .4rem inset hsla(212, 42%, 31%, .7);
+    padding: .3rem;
+    color: hsla(212, 80%, 10%, 1);
+    box-shadow: .2rem .2rem .4rem black;
+}
+
+.input-collection input:hover,
+.input-collection input:focus
+{
+    background-color: hsla(216, 100%, 75%, 1);
+    border: .4rem inset hsla(208, 42%, 50%, 1);
+}
+
+.radio-collection
+{
+    width: 40%;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: .05rem .05rem .05rem #ddd;
+    margin-top: -.4rem;
+    margin-bottom: 2rem;
+}
+
+.radio-collection fieldset
+{
+    width: 100%;
+    border: .4rem outset hsla(212, 42%, 31%, .7);
+    text-align: center;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.radio-collection legend
+{
+    align-self: center;
+    background-color: transparent;
+    font-size: 1.8rem;
+}
+
+.radio-collection label
+{
+    align-self: center;
+    background-color: transparent;
+    font-size: 1.4rem;
+}
+
+.radio-collection input
+{
+    align-self: center;
+    background-color: transparent;
+    font-size: 1.4rem;
+}
