@@ -79,27 +79,40 @@
             <fieldset>
             <legend>What are the main points of target for your field:</legend>
 
+            <div class="checkbox-collection-item">
+                <label for="checkbox-client-service">Client Service:</label>
+                <input type="checkbox" name="points-of-target" id="checkbox-client-service" value="client-service">
+            </div>
 
-            <label for="checkbox-client-service">Client Service:</label>
-            <input type="checkbox" name="points-of-target" id="checkbox-client-service" value="client-service">
+            <div class="checkbox-collection-item">
+                <label for="checkbox-client-networking">Client Networking:</label>
+                <input type="checkbox" name="points-of-target" id="checkbox-client-networking" value="client-networking">
+            </div>  
 
-            <label for="checkbox-client-networking">Client Networking:</label>
-            <input type="checkbox" name="points-of-target" id="checkbox-client-networking" value="client-networking">
-
+            <div class="checkbox-collection-item">
             <label for="checkbox-product-production">Production:</label>
             <input type="checkbox" name="points-of-target" id="checkbox-product-production" value="production">
+            </div>
 
+            <div class="checkbox-collection-item">
             <label for="checkbox-product-advertisement">Product advertisement:</label>
             <input type="checkbox" name="points-of-target" id="checkbox-product-advertisement" value="product-advertisement">
+            </div>
 
+            <div class="checkbox-collection-item">
             <label for="checkbox-product-sales">Product Sales:</label>
             <input type="checkbox" name="points-of-target" id="checkbox-product-Sales" value="product-sales">
+            </div>
 
+            <div class="checkbox-collection-item">
             <label for="checkbox-product-distribution">Product Distribution:</label>
             <input type="checkbox" name="points-of-target" id="checkbox-product-distribution" value="product-distribution">
+            </div>
 
+            <div class="checkbox-collection-item">
             <label for="checkbox-product-repair">Product Repairs:</label>
             <input type="checkbox" name="points-of-target" id="checkbox-product-repair" value="product-repair">
+            </div>
 
             </fieldset>
 
@@ -110,8 +123,11 @@
             <textarea id="comments-textarea" name="comments-textarea" placeholder="Any additional comments here..." maxlength="1000"></textarea>
         </div>
 
-        <button type="reset" id="reset">Reset</button>
-        <button type="submit" id="submit">Sign Up</button>
+        <div class="btn-collection">
+            <button type="reset" id="reset">Reset</button>
+            <button type="submit" id="submit">Sign Up</button>
+        </div>
+
     </form>
 </body>
 </html>

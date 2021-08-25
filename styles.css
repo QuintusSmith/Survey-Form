@@ -58,9 +58,9 @@ body
 #survey-form
 {
     position: absolute;
-    top: 50%;
+    top: 5vh;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     background-color: hsla(212, 50%, 70%, .7);
     border: .7rem inset hsla(212, 42%, 31%, .7);
     display: flex;
@@ -72,7 +72,6 @@ body
     width: 70%;
     height: auto;
     box-shadow: 0rem 0rem .4rem 1rem hsla(0, 0%, 0%, .6);
-    margin-top: 5vh;
 }
 
 #title
@@ -169,6 +168,12 @@ body
     font-size: var(--font-item);
 }
 
+.radio-collection label:hover,
+.radio-collection label:focus
+{
+    background-color: hsla(216, 100%, 75%, .9);
+}
+
 .radio-collection label:first-of-type
 {
     margin-top: 0;
@@ -178,6 +183,12 @@ body
 .radio-collection input
 {
     font-size: var(--font-item);
+}
+
+.radio-collection input:hover,
+.radio-collection input:focus
+{
+    background-color: hsla(216, 100%, 75%, 1);
 }
 
 .dropdown-collection
@@ -214,12 +225,12 @@ body
 }
 
 #dropdown:focus-within,
-#dropdown:focus
+#dropdown:focus,
+#dropdown:hover
 {
-    background-color: hsla(212, 50%, 75%, .8);
-    border: .4rem inset hsla(212, 42%, 31%, .9);
-    color: hsla(212, 60%, 10%, 1);
     cursor: pointer;
+    background-color: hsla(216, 100%, 75%, 1);
+    border: .4rem inset hsla(208, 42%, 50%, 1);
 }
 
 #dropdown > option
@@ -233,4 +244,123 @@ body
     width: 80%;
     font-size: var(--font-item);
     height: auto;
+    margin-bottom: 2rem;
+}
+
+.checkbox-collection-item:hover,
+.checkbox-collection-item:focus
+{
+    cursor: pointer;
+    background-color: hsla(216, 100%, 75%, 1);
+}
+
+.checkbox-collection fieldset
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.checkbox-collection-item
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox-collection-item label
+{
+    font-size: var(--font-item-main);
+    margin-bottom: .3rem;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: .2rem;
+    text-shadow: .05rem .05rem .05rem #ddd;
+}
+
+.checkbox-collection-item input
+{
+    font-size: var(--font-item-main);
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: .2rem .2rem .4rem black;
+}
+
+.checkbox-collection legend
+{
+    font-size: var(--font-item-main);
+}
+
+.textarea-collection
+{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.textarea-collection label
+{
+    width: 100%;
+    font-size: var(--font-item-main);
+    letter-spacing: .2rem;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: .05rem .05rem .05rem #ddd;
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+#comments-textarea
+{
+    resize: none;
+    width: 100%;
+    height: 30vh;
+    font-size: var(--font-item);
+    background-color: hsla(212, 100%, 85%, .5);
+    border: .4rem inset hsla(212, 42%, 31%, .7);
+    color: hsla(212, 80%, 10%, 1);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+#comments-textarea:focus,
+#comments-textarea:hover
+{
+    cursor: pointer;
+    background-color: hsla(216, 100%, 75%, 1);
+    border: .4rem inset hsla(208, 42%, 50%, 1);
+}
+
+.btn-collection
+{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn-collection button
+{
+    width: 40%;
+    padding: .5rem;
+    font-size: var(--font-item-main);
+    border-radius: 999999999px;
+    background-color: hsla(212, 70%, 95%, .5);
+    border: .4rem inset hsla(212, 30%, 75%, .7);
+    color: hsla(212, 80%, 55%, 1);
+    cursor: pointer;
+}
+
+.btn-collection button:hover,
+.btn-collection button:focus
+{
+    background-color: hsla(212, 50%, 65%, 1);
+    border: .4rem inset hsla(212, 50%, 45%, 1);
+    color: hsla(212, 80%, 25%, 1);
 }
